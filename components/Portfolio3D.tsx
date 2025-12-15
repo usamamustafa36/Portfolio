@@ -107,7 +107,7 @@ function QuantumSphere() {
 
 export default function Portfolio3D() {
   const particles = useMemo(() => {
-    return Array.from({ length: 20 }, (_, i) => ({
+    return Array.from({ length: 20 }, () => ({
       position: [
         (Math.random() - 0.5) * 8,
         (Math.random() - 0.5) * 8,

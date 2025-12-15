@@ -2,7 +2,7 @@
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-import { GraduationCap, Award, BookOpen, Code2, Shield, Zap } from 'lucide-react'
+import { GraduationCap, Award, Code2, Shield, Zap } from 'lucide-react'
 
 const education = [
   {

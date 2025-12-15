@@ -11,12 +11,10 @@ import Navigation from '@/components/Navigation'
 import LoadingScreen from '@/components/LoadingScreen'
 import CustomCursor from '@/components/CustomCursor'
 import Stats from '@/components/Stats'
-import Testimonials from '@/components/Testimonials'
 import ParallaxSection from '@/components/ParallaxSection'
 import ScrollToTop from '@/components/ScrollToTop'
 import AnimatedGradient from '@/components/AnimatedGradient'
 import SkipToContent from '@/components/SkipToContent'
-import LibraryHub from '@/components/LibraryHub'
 
 export default function Home() {
   useEffect(() => {

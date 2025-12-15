@@ -14,7 +14,6 @@ export default function Typewriter({ texts, onComplete, className = '' }: Typewr
   const [line2, setLine2] = useState('')
   const [isTypingLine1, setIsTypingLine1] = useState(true)
   const [isTypingLine2, setIsTypingLine2] = useState(false)
-  const [isComplete, setIsComplete] = useState(false)
 
   useEffect(() => {
     if (texts.length < 2) return
@@ -43,7 +42,6 @@ export default function Typewriter({ texts, onComplete, className = '' }: Typewr
       } else {
         // Both lines complete
         setIsTypingLine2(false)
-        setIsComplete(true)
         if (onComplete) {
           setTimeout(() => onComplete(), 1000)
         }
