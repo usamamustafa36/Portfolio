@@ -247,255 +247,67 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Revolutionary CTA Buttons - Split Panel Architecture */}
+          {/* Simple Symmetrical CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.4, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="flex flex-col sm:flex-row gap-4 sm:gap-6 lg:gap-8 justify-center items-center mt-6 sm:mt-8 px-4 w-full max-w-4xl mx-auto"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mt-6 sm:mt-8 px-4 w-full"
           >
-            {/* Primary CTA - Geometric Split Design */}
+            {/* Primary Button - Let's Build */}
             <motion.a
               href="#contact"
-              className="group relative w-full sm:w-auto min-w-[280px] sm:min-w-[320px] h-[80px] sm:h-[90px] flex items-center overflow-hidden cursor-pointer"
+              className="group relative px-8 sm:px-10 md:px-12 py-4 sm:py-5 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-white font-semibold text-base sm:text-lg rounded-lg sm:rounded-xl shadow-lg shadow-green-500/30 hover:shadow-green-500/50 transition-all duration-300 flex items-center justify-center gap-3 min-w-[200px] sm:min-w-[220px]"
               aria-label="Get started - Navigate to contact section"
-              whileHover={{ scale: 1.02, y: -2 }}
+              whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}
             >
-              {/* Left Accent Panel - Animated Green Bar */}
-              <motion.div
-                className="absolute left-0 top-0 bottom-0 w-[6px] sm:w-[8px] bg-gradient-to-b from-green-400 via-green-500 to-green-600"
-                initial={{ scaleY: 1 }}
-                whileHover={{ scaleY: 1.1 }}
-                transition={{ type: 'spring', stiffness: 300 }}
+              <span>Let&apos;s Build</span>
+              <motion.svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                className="text-white"
+                animate={{ x: [0, 4, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
               >
-                <motion.div
-                  className="absolute inset-0 bg-white/30"
-                  animate={{
-                    y: ['-100%', '100%'],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: 'linear',
-                  }}
+                <path
+                  d="M7 15L13 10L7 5"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
-              </motion.div>
-
-              {/* Main Content Panel */}
-              <div className="flex-1 h-full bg-gradient-to-r from-slate-900/95 via-slate-800/90 to-slate-900/95 backdrop-blur-xl border-l-0 border-r border-t border-b border-white/10 relative pl-4 sm:pl-6 pr-4 sm:pr-6 flex items-center justify-between group-hover:border-white/20 transition-all duration-500">
-                {/* Text Content */}
-                <div className="flex flex-col items-start justify-center">
-                  <motion.span
-                    className="text-white font-bold text-lg sm:text-xl md:text-2xl tracking-tight"
-                    whileHover={{ x: 4 }}
-                    transition={{ type: 'spring', stiffness: 400 }}
-                  >
-                    Let&apos;s Build
-                  </motion.span>
-                  <motion.span
-                    className="text-green-400/70 text-xs sm:text-sm font-medium mt-0.5"
-                    initial={{ opacity: 0.7 }}
-                    whileHover={{ opacity: 1 }}
-                  >
-                    Start Your Project
-                  </motion.span>
-                </div>
-
-                {/* Right Icon Container */}
-                <motion.div
-                  className="relative w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center"
-                  whileHover={{ rotate: 45, scale: 1.1 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                >
-                  {/* Outer Ring */}
-                  <motion.div
-                    className="absolute inset-0 rounded-full border-2 border-green-500/50"
-                    animate={{
-                      scale: [1, 1.2, 1],
-                      opacity: [0.5, 0.8, 0.5],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                    }}
-                  />
-                  {/* Inner Icon */}
-                  <motion.div
-                    className="relative w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center shadow-lg shadow-green-500/50"
-                    whileHover={{ boxShadow: '0 0 30px rgba(16, 185, 129, 0.8)' }}
-                  >
-                    <motion.svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      className="text-white"
-                      animate={{ x: [0, 2, 0] }}
-                      transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-                    >
-                      <path
-                        d="M7 15L13 10L7 5"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </motion.svg>
-                  </motion.div>
-                </motion.div>
-
-                {/* Hover Glow Effect */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-green-500/0 via-green-500/10 to-green-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  initial={false}
-                />
-
-                {/* Animated Grid Pattern */}
-                <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500"
-                  style={{
-                    backgroundImage: `
-                      linear-gradient(rgba(16, 185, 129, 0.1) 1px, transparent 1px),
-                      linear-gradient(90deg, rgba(16, 185, 129, 0.1) 1px, transparent 1px)
-                    `,
-                    backgroundSize: '20px 20px',
-                  }}
-                />
-              </div>
-
-              {/* Right Edge Accent */}
-              <motion.div
-                className="absolute right-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-green-500/50 to-transparent"
-                initial={{ opacity: 0.5 }}
-                whileHover={{ opacity: 1, width: '4px' }}
-              />
+              </motion.svg>
             </motion.a>
 
-            {/* Secondary CTA - Asymmetric Split Design */}
+            {/* Secondary Button - View Research */}
             <motion.a
               href="#research"
-              className="group relative w-full sm:w-auto min-w-[280px] sm:min-w-[320px] h-[80px] sm:h-[90px] flex items-center overflow-hidden cursor-pointer"
+              className="group relative px-8 sm:px-10 md:px-12 py-4 sm:py-5 bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/20 hover:border-white/40 text-white font-semibold text-base sm:text-lg rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-3 min-w-[200px] sm:min-w-[220px]"
               aria-label="View research - Navigate to research section"
-              whileHover={{ scale: 1.02, y: -2 }}
+              whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}
             >
-              {/* Left Accent Panel - Animated Blue/Teal Bar */}
-              <motion.div
-                className="absolute left-0 top-0 bottom-0 w-[6px] sm:w-[8px] bg-gradient-to-b from-cyan-400 via-blue-500 to-indigo-600"
-                initial={{ scaleY: 1 }}
-                whileHover={{ scaleY: 1.1 }}
-                transition={{ type: 'spring', stiffness: 300 }}
+              <span>View Research</span>
+              <motion.svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                className="text-white"
+                animate={{ x: [0, 4, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
               >
-                <motion.div
-                  className="absolute inset-0 bg-white/20"
-                  animate={{
-                    y: ['100%', '-100%'],
-                  }}
-                  transition={{
-                    duration: 2.5,
-                    repeat: Infinity,
-                    ease: 'linear',
-                  }}
+                <path
+                  d="M10 3L17 10L10 17M17 10H3"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
-              </motion.div>
-
-              {/* Main Content Panel */}
-              <div className="flex-1 h-full bg-gradient-to-r from-slate-900/95 via-slate-800/90 to-slate-900/95 backdrop-blur-xl border-l-0 border-r border-t border-b border-white/10 relative pl-4 sm:pl-6 pr-4 sm:pr-6 flex items-center justify-between group-hover:border-white/20 transition-all duration-500">
-                {/* Text Content */}
-                <div className="flex flex-col items-start justify-center">
-                  <motion.span
-                    className="text-white font-bold text-lg sm:text-xl md:text-2xl tracking-tight"
-                    whileHover={{ x: 4 }}
-                    transition={{ type: 'spring', stiffness: 400 }}
-                  >
-                    View Research
-                  </motion.span>
-                  <motion.span
-                    className="text-cyan-400/70 text-xs sm:text-sm font-medium mt-0.5"
-                    initial={{ opacity: 0.7 }}
-                    whileHover={{ opacity: 1 }}
-                  >
-                    Explore Publications
-                  </motion.span>
-                </div>
-
-                {/* Right Icon Container - Different Style */}
-                <motion.div
-                  className="relative w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center"
-                  whileHover={{ rotate: -45, scale: 1.1 }}
-                  transition={{ type: 'spring', stiffness: 300 }}
-                >
-                  {/* Hexagon Shape */}
-                  <motion.div
-                    className="absolute inset-0"
-                    style={{
-                      clipPath: 'polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%)',
-                    }}
-                    animate={{
-                      rotate: [0, 360],
-                    }}
-                    transition={{
-                      duration: 20,
-                      repeat: Infinity,
-                      ease: 'linear',
-                    }}
-                  >
-                    <div className="w-full h-full bg-gradient-to-br from-cyan-500/30 to-blue-600/30 border border-cyan-400/50" />
-                  </motion.div>
-                  {/* Inner Icon */}
-                  <motion.div
-                    className="relative w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-500/50 rotate-45"
-                    whileHover={{ boxShadow: '0 0 30px rgba(6, 182, 212, 0.8)', rotate: 0 }}
-                  >
-                    <motion.svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                      className="text-white -rotate-45"
-                      animate={{ scale: [1, 1.1, 1] }}
-                      transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
-                    >
-                      <path
-                        d="M10 3L17 10L10 17M17 10H3"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </motion.svg>
-                  </motion.div>
-                </motion.div>
-
-                {/* Hover Glow Effect */}
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-cyan-500/10 to-cyan-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  initial={false}
-                />
-
-                {/* Animated Diagonal Lines */}
-                <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500"
-                  style={{
-                    backgroundImage: `repeating-linear-gradient(
-                      45deg,
-                      transparent,
-                      transparent 10px,
-                      rgba(6, 182, 212, 0.1) 10px,
-                      rgba(6, 182, 212, 0.1) 20px
-                    )`,
-                  }}
-                />
-              </div>
-
-              {/* Right Edge Accent */}
-              <motion.div
-                className="absolute right-0 top-0 bottom-0 w-[2px] bg-gradient-to-b from-transparent via-cyan-500/50 to-transparent"
-                initial={{ opacity: 0.5 }}
-                whileHover={{ opacity: 1, width: '4px' }}
-              />
+              </motion.svg>
             </motion.a>
           </motion.div>
         </motion.div>
