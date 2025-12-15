@@ -149,7 +149,7 @@ export default function Services() {
     <section
       id="services"
       ref={ref}
-      className="py-40 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-950 via-slate-900/95 to-slate-950 relative overflow-hidden"
+      className="py-16 sm:py-24 md:py-32 lg:py-40 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-950 via-slate-900/95 to-slate-950 relative overflow-hidden"
     >
       {/* Dynamic Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -216,7 +216,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight px-4"
             style={{ letterSpacing: '-0.02em' }}
           >
             Enterprise-Grade
@@ -242,7 +242,7 @@ export default function Services() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed px-4"
             style={{ letterSpacing: '0.01em' }}
           >
             Comprehensive solutions engineered for enterprise-scale operations, security, and innovation. 
@@ -255,7 +255,7 @@ export default function Services() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"
         >
           {services.map((service, index) => {
             const Icon = service.icon
@@ -273,7 +273,7 @@ export default function Services() {
                   rotateY: 2,
                   transition: { type: 'spring', stiffness: 400, damping: 25 },
                 }}
-                className={`service-card ${service.bgColor} glass-strong rounded-3xl p-8 border border-white/10 hover:border-white/30 hover:shadow-2xl hover:shadow-green-500/30 transition-all duration-700 group cursor-pointer relative overflow-hidden h-full flex flex-col`}
+                className={`service-card ${service.bgColor} glass-strong rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 border border-white/10 hover:border-white/30 hover:shadow-2xl hover:shadow-green-500/30 transition-all duration-700 group cursor-pointer relative overflow-hidden h-full flex flex-col`}
               >
                 {/* Dynamic gradient overlay */}
                 <motion.div
@@ -296,10 +296,10 @@ export default function Services() {
                     scale: 1.15,
                   }}
                   transition={{ duration: 0.7, type: 'spring', stiffness: 200 }}
-                  className={`relative w-24 h-24 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-8 shadow-2xl group-hover:shadow-green-500/60 transition-all duration-700 flex-shrink-0 glow-green`}
+                  className={`relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-xl sm:rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 sm:mb-6 md:mb-8 shadow-2xl group-hover:shadow-green-500/60 transition-all duration-700 flex-shrink-0 glow-green`}
                 >
-                  <div className={`absolute inset-0 rounded-2xl ${service.iconBg} blur-2xl opacity-40 group-hover:opacity-100 transition-opacity duration-500`} />
-                  <Icon className="w-12 h-12 text-white relative z-10 stroke-[2.5] drop-shadow-lg" />
+                  <div className={`absolute inset-0 rounded-xl sm:rounded-2xl ${service.iconBg} blur-2xl opacity-40 group-hover:opacity-100 transition-opacity duration-500`} />
+                  <Icon className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white relative z-10 stroke-[2.5] drop-shadow-lg" />
                   
                   {/* Pulsing glow effect */}
                   <motion.div
@@ -324,41 +324,42 @@ export default function Services() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={isInView ? { opacity: 1, scale: 1 } : {}}
                   transition={{ delay: 0.4 + index * 0.1 }}
-                  className="absolute top-6 right-6 px-3 py-1.5 bg-white/5 backdrop-blur-sm rounded-full border border-white/10"
+                  className="absolute top-3 sm:top-4 md:top-6 right-3 sm:right-4 md:right-6 px-2 sm:px-3 py-1 sm:py-1.5 bg-white/5 backdrop-blur-sm rounded-full border border-white/10"
                 >
-                  <span className="text-xs font-semibold text-green-400">{service.stats}</span>
+                  <span className="text-[10px] sm:text-xs font-semibold text-green-400">{service.stats}</span>
                 </motion.div>
                 
                 {/* Content */}
                 <div className="flex-grow flex flex-col relative z-10">
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-white group-hover:via-green-400 group-hover:to-white group-hover:bg-clip-text transition-all duration-700 relative" style={{ letterSpacing: '-0.02em' }}>
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-3 md:mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-white group-hover:via-green-400 group-hover:to-white group-hover:bg-clip-text transition-all duration-700 relative break-words" style={{ letterSpacing: '-0.02em' }}>
                     {service.title}
                     <motion.div
                       className="absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-green-500 to-amber-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"
                       initial={false}
                     />
                   </h3>
-                  <p className="text-white/70 text-base leading-relaxed mb-6 font-light flex-grow group-hover:text-white/90 transition-colors duration-500" style={{ letterSpacing: '0.015em', lineHeight: '1.7' }}>
+                  <p className="text-white/70 text-sm sm:text-base leading-relaxed mb-4 sm:mb-6 font-light flex-grow group-hover:text-white/90 transition-colors duration-500 break-words" style={{ letterSpacing: '0.015em', lineHeight: '1.7' }}>
                     {service.description}
                   </p>
                   
                   {/* Dynamic Features List */}
-                  <div className="space-y-3 mb-6">
+                  <div className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
                     {service.features.map((feature, idx) => (
                       <motion.div
                         key={feature}
                         initial={{ opacity: 0, x: -20 }}
                         animate={isInView ? { opacity: 1, x: 0 } : {}}
                         transition={{ delay: 0.5 + index * 0.1 + idx * 0.08 }}
-                        className="flex items-center gap-3 text-sm text-white/50 group-hover:text-white/80 transition-colors duration-300"
+                        className="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm text-white/50 group-hover:text-white/80 transition-colors duration-300"
                       >
                         <motion.div
                           whileHover={{ scale: 1.2, rotate: 360 }}
                           transition={{ duration: 0.3 }}
+                          className="flex-shrink-0"
                         >
-                          <CheckCircle2 className={`w-4 h-4 text-green-400`} />
+                          <CheckCircle2 className={`w-3 h-3 sm:w-4 sm:h-4 text-green-400`} />
                         </motion.div>
-                        <span className="font-medium">{feature}</span>
+                        <span className="font-medium break-words">{feature}</span>
                       </motion.div>
                     ))}
                   </div>
@@ -438,7 +439,7 @@ export default function Services() {
             href="#contact"
             whileHover={{ scale: 1.06, y: -3 }}
             whileTap={{ scale: 0.97 }}
-            className="group inline-flex items-center gap-3 px-14 py-7 bg-gradient-to-r from-green-600 via-green-500 to-green-600 text-white rounded-full font-bold text-lg tracking-wide shadow-2xl shadow-green-500/50 hover:shadow-green-500/80 transition-all duration-700 relative overflow-hidden glow-green-intense"
+            className="group inline-flex items-center gap-2 sm:gap-3 px-8 sm:px-12 md:px-14 py-4 sm:py-6 md:py-7 bg-gradient-to-r from-green-600 via-green-500 to-green-600 text-white rounded-full font-bold text-sm sm:text-base md:text-lg tracking-wide shadow-2xl shadow-green-500/50 hover:shadow-green-500/80 transition-all duration-700 relative overflow-hidden glow-green-intense w-full sm:w-auto justify-center"
             style={{ letterSpacing: '0.08em' }}
           >
             <span className="relative z-10">Explore All Services</span>

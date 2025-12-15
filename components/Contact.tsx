@@ -116,7 +116,7 @@ export default function Contact() {
     <section
       id="contact"
       ref={ref}
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900 via-green-900/20 to-slate-900 relative overflow-hidden"
+      className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900 via-green-900/20 to-slate-900 relative overflow-hidden"
     >
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -153,10 +153,10 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4 px-4">
             Get In <span className="bg-gradient-to-r from-beige-300 to-green-500 bg-clip-text text-transparent">Touch</span>
           </h2>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto px-4">
             Ready to transform your ideas into reality? Let&apos;s discuss how we can help you achieve 
             extraordinary results. Whether it&apos;s enterprise software, security solutions, or groundbreaking research, 
             we&apos;re here to make it happen.
@@ -167,7 +167,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="bg-white/5 backdrop-blur-md rounded-2xl p-8 md:p-12 border border-white/10 shadow-2xl"
+          className="bg-white/5 backdrop-blur-md rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 lg:p-12 border border-white/10 shadow-2xl"
         >
           {isSubmitted ? (
             <motion.div
@@ -199,7 +199,7 @@ export default function Contact() {
               >
                 <label
                   htmlFor="name"
-                  className="block text-white/90 font-medium mb-2"
+                  className="block text-white/90 font-medium mb-2 text-sm sm:text-base"
                 >
                   Name
                 </label>
@@ -213,7 +213,7 @@ export default function Contact() {
                   aria-required="true"
                   aria-invalid={errors.name ? 'true' : 'false'}
                   aria-describedby={errors.name ? 'name-error' : undefined}
-                  className={`w-full px-4 py-3 bg-white/10 border rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 transition-all ${
+                  className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-white/10 border rounded-lg sm:rounded-xl text-sm sm:text-base text-white placeholder-white/50 focus:outline-none focus:ring-2 transition-all ${
                     errors.name
                       ? 'border-red-500 focus:border-red-500 focus:ring-red-500/50'
                       : 'border-white/20 focus:border-green-500 focus:ring-green-500/50'
@@ -241,7 +241,7 @@ export default function Contact() {
               >
                 <label
                   htmlFor="email"
-                  className="block text-white/90 font-medium mb-2"
+                  className="block text-white/90 font-medium mb-2 text-sm sm:text-base"
                 >
                   Email
                 </label>
@@ -255,7 +255,7 @@ export default function Contact() {
                   aria-required="true"
                   aria-invalid={errors.email ? 'true' : 'false'}
                   aria-describedby={errors.email ? 'email-error' : undefined}
-                  className={`w-full px-4 py-3 bg-white/10 border rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 transition-all ${
+                  className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-white/10 border rounded-lg sm:rounded-xl text-sm sm:text-base text-white placeholder-white/50 focus:outline-none focus:ring-2 transition-all ${
                     errors.email
                       ? 'border-red-500 focus:border-red-500 focus:ring-red-500/50'
                       : 'border-white/20 focus:border-green-500 focus:ring-green-500/50'
@@ -283,7 +283,7 @@ export default function Contact() {
               >
                 <label
                   htmlFor="message"
-                  className="block text-white/90 font-medium mb-2"
+                  className="block text-white/90 font-medium mb-2 text-sm sm:text-base"
                 >
                   Message
                 </label>
@@ -293,11 +293,11 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={6}
+                  rows={5}
                   aria-required="true"
                   aria-invalid={errors.message ? 'true' : 'false'}
                   aria-describedby={errors.message ? 'message-error' : undefined}
-                  className={`w-full px-4 py-3 bg-white/10 border rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 transition-all resize-none ${
+                  className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-white/10 border rounded-lg sm:rounded-xl text-sm sm:text-base text-white placeholder-white/50 focus:outline-none focus:ring-2 transition-all resize-none ${
                     errors.message
                       ? 'border-red-500 focus:border-red-500 focus:ring-red-500/50'
                       : 'border-white/20 focus:border-green-500 focus:ring-green-500/50'
@@ -337,7 +337,7 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.6 }}
-                className="w-full px-8 py-4 bg-gradient-to-r from-green-600 to-green-700 rounded-xl text-white font-semibold text-lg shadow-lg shadow-green-500/50 hover:shadow-green-500/70 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-green-600 to-green-700 rounded-lg sm:rounded-xl text-white font-semibold text-sm sm:text-base md:text-lg shadow-lg shadow-green-500/50 hover:shadow-green-500/70 transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed min-h-[44px]"
                 aria-busy={isSubmitting}
               >
                 {isSubmitting ? (
@@ -359,22 +359,22 @@ export default function Contact() {
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.8 }}
-            className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-center gap-6"
+            className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
           >
             <motion.a
               href="mailto:contact@outlance.com"
               whileHover={{ scale: 1.1, y: -2 }}
-              className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
+              className="flex items-center gap-2 text-sm sm:text-base text-white/80 hover:text-white transition-colors min-h-[44px]"
             >
-              <Mail className="w-5 h-5" />
-              <span>contact@outlance.com</span>
+              <Mail className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+              <span className="break-all">contact@outlance.com</span>
             </motion.a>
             <motion.a
               href="#"
               whileHover={{ scale: 1.1, y: -2 }}
-              className="flex items-center gap-2 text-white/80 hover:text-white transition-colors"
+              className="flex items-center gap-2 text-sm sm:text-base text-white/80 hover:text-white transition-colors min-h-[44px]"
             >
-              <MessageSquare className="w-5 h-5" />
+              <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
               <span>Live Chat</span>
             </motion.a>
           </motion.div>

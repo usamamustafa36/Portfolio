@@ -38,8 +38,8 @@ export default function Navigation() {
       role="navigation"
       aria-label="Main navigation"
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="flex items-center justify-between h-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        <div className="flex items-center justify-between h-16 sm:h-20 md:h-24">
           <motion.a
             href="#home"
             whileHover={{ scale: 1.02 }}
@@ -83,7 +83,7 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white/80 hover:text-white transition-colors p-2"
+            className="md:hidden text-white/80 hover:text-white transition-colors p-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
             aria-expanded={isMobileMenuOpen}
@@ -106,7 +106,7 @@ export default function Navigation() {
             role="menu"
             aria-label="Mobile navigation menu"
           >
-            <ul className="px-6 py-6 space-y-2">
+            <ul className="px-4 sm:px-6 py-4 sm:py-6 space-y-1 sm:space-y-2">
               {navItems.map((item, index) => (
                 <li key={item.name} role="none">
                   <motion.a
@@ -116,7 +116,7 @@ export default function Navigation() {
                     exit={{ opacity: 0, x: -20 }}
                     transition={{ delay: index * 0.1 }}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-4 py-3 text-base font-medium text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-300"
+                    className="block px-4 py-3 text-sm sm:text-base font-medium text-white/80 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-300 min-h-[44px] flex items-center"
                     role="menuitem"
                     aria-label={`Navigate to ${item.name} section`}
                   >

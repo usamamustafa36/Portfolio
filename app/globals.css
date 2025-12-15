@@ -43,7 +43,19 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
+  scroll-padding-top: 4rem;
+}
+
+@media (min-width: 640px) {
+  html {
+    scroll-padding-top: 5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 6rem;
+  }
 }
 
 body {
@@ -62,6 +74,9 @@ body {
   font-variant-ligatures: common-ligatures;
   font-kerning: normal;
   position: relative;
+  /* Mobile optimizations */
+  -webkit-tap-highlight-color: rgba(16, 185, 129, 0.2);
+  touch-action: manipulation;
 }
 
 /* Removed gradientShift animation for visual stability */
@@ -156,9 +171,45 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Mobile touch target optimizations */
+button,
+a,
+input,
+textarea,
+select {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+@media (min-width: 768px) {
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    min-height: auto;
+    min-width: auto;
+  }
+}
+
+/* Prevent text size adjustment on iOS */
+@media screen and (max-width: 768px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}
+
 /* Premium custom scrollbar */
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
+}
+
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
 }
 
 ::-webkit-scrollbar-track {

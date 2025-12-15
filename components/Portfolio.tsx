@@ -63,7 +63,7 @@ export default function Portfolio() {
     <section
       id="portfolio"
       ref={ref}
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900"
+      className="py-12 sm:py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div
@@ -72,16 +72,16 @@ export default function Portfolio() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-4 px-4">
             My <span className="bg-gradient-to-r from-beige-300 to-green-500 bg-clip-text text-transparent">Projects</span>
           </h2>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-white/80 max-w-2xl mx-auto px-4">
             Exploring innovative security solutions and research platforms that advance the field of 
             cryptography and information security
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -107,7 +107,7 @@ export default function Portfolio() {
                 rotateY: 5,
                 transition: { type: 'spring', stiffness: 300, damping: 20 },
               }}
-              className={`${project.bgColor} backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:border-white/30 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-500 group cursor-pointer h-full flex flex-col relative overflow-hidden`}
+              className={`${project.bgColor} backdrop-blur-md rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 border border-white/10 hover:border-white/30 hover:shadow-2xl hover:shadow-green-500/20 transition-all duration-500 group cursor-pointer h-full flex flex-col relative overflow-hidden`}
             >
               {/* Gradient overlay on hover */}
               <motion.div
@@ -115,45 +115,47 @@ export default function Portfolio() {
                 initial={false}
               />
               
-              <div className="flex items-start justify-between mb-6 relative z-10">
+              <div className="flex items-start justify-between mb-4 sm:mb-6 relative z-10">
                 <motion.div
                   whileHover={{ rotate: 360, scale: 1.1 }}
                   transition={{ duration: 0.6, type: 'spring' }}
-                  className={`w-14 h-14 rounded-xl bg-gradient-to-br ${project.color} flex items-center justify-center shadow-xl group-hover:shadow-2xl group-hover:shadow-green-500/40 transition-all duration-500`}
+                  className={`w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-br ${project.color} flex items-center justify-center shadow-xl group-hover:shadow-2xl group-hover:shadow-green-500/40 transition-all duration-500 flex-shrink-0`}
                 >
-                  <ExternalLink className="w-7 h-7 text-white" />
+                  <ExternalLink className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                 </motion.div>
                 <div className="flex gap-2">
                   <motion.button
                     whileHover={{ scale: 1.2, rotate: 15 }}
                     whileTap={{ scale: 0.9 }}
                     className="text-white/60 hover:text-white transition-colors"
+                    aria-label="View on GitHub"
                   >
-                    <Github size={20} />
+                    <Github size={18} className="sm:w-5 sm:h-5" />
                   </motion.button>
                   <motion.button
                     whileHover={{ scale: 1.2, rotate: -15 }}
                     whileTap={{ scale: 0.9 }}
                     className="text-white/60 hover:text-white transition-colors"
+                    aria-label="View project"
                   >
-                    <ExternalLink size={20} />
+                    <ExternalLink size={18} className="sm:w-5 sm:h-5" />
                   </motion.button>
                 </div>
               </div>
 
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-beige-300 group-hover:to-green-500 group-hover:bg-clip-text transition-all duration-500 relative z-10">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-3 sm:mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-beige-300 group-hover:to-green-500 group-hover:bg-clip-text transition-all duration-500 relative z-10 break-words">
                 {project.title}
               </h3>
-              <p className="text-white/80 text-base leading-relaxed mb-6 flex-grow relative z-10">
+              <p className="text-white/80 text-sm sm:text-base leading-relaxed mb-4 sm:mb-6 flex-grow relative z-10 break-words">
                 {project.description}
               </p>
 
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2">
                 {project.tags.map((tag) => (
                   <motion.span
                     key={tag}
                     whileHover={{ scale: 1.1 }}
-                    className={`px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${project.color} text-white shadow-md`}
+                    className={`px-2 sm:px-3 py-1 rounded-full text-[10px] sm:text-xs font-medium bg-gradient-to-r ${project.color} text-white shadow-md whitespace-nowrap`}
                   >
                     {tag}
                   </motion.span>

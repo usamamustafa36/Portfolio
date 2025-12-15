@@ -67,7 +67,7 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
   }, [isInView, value])
 
   return (
-    <div ref={ref} className="text-5xl md:text-6xl font-bold">
+    <div ref={ref} className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">
       {Math.floor(count)}
       {suffix}
     </div>
@@ -81,7 +81,7 @@ export default function Stats() {
   return (
     <section
       ref={ref}
-      className="py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-950 via-slate-900/95 to-slate-950 relative overflow-hidden"
+      className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-950 via-slate-900/95 to-slate-950 relative overflow-hidden"
     >
       {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
@@ -118,17 +118,17 @@ export default function Stats() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6" style={{ letterSpacing: '-0.03em' }}>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 px-4" style={{ letterSpacing: '-0.03em' }}>
             <span className="text-gradient-premium">Impact</span>{' '}
             <span className="text-white">Metrics</span>
           </h2>
-          <p className="text-xl md:text-2xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed" style={{ letterSpacing: '0.01em' }}>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed px-4" style={{ letterSpacing: '0.01em' }}>
             Proven results and measurable impact. These numbers reflect our commitment 
             to delivering exceptional value and driving innovation.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {stats.map((stat, index) => {
             const Icon = stat.icon
             return (
@@ -158,7 +158,7 @@ export default function Stats() {
                   rotateY: 5,
                   transition: { type: 'spring', stiffness: 400, damping: 25 },
                 }}
-                className="glass-strong rounded-3xl p-8 border border-white/10 hover:border-white/30 transition-all text-center group relative overflow-hidden"
+                className="glass-strong rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 border border-white/10 hover:border-white/30 transition-all text-center group relative overflow-hidden"
               >
                 {/* Animated background gradient */}
                 <motion.div
@@ -184,9 +184,9 @@ export default function Stats() {
                       scale: 1.15,
                     }}
                     transition={{ duration: 0.6, type: 'spring', stiffness: 200 }}
-                    className={`relative w-20 h-20 rounded-2xl bg-gradient-to-br ${stat.gradient} flex items-center justify-center shadow-2xl group-hover:shadow-${stat.gradient.split(' ')[0].split('-')[1]}-500/60 transition-all duration-700 glow-green`}
+                    className={`relative w-16 h-16 sm:w-20 sm:h-20 md:w-20 md:h-20 rounded-xl sm:rounded-2xl bg-gradient-to-br ${stat.gradient} flex items-center justify-center shadow-2xl group-hover:shadow-${stat.gradient.split(' ')[0].split('-')[1]}-500/60 transition-all duration-700 glow-green`}
                   >
-                    <Icon className="w-10 h-10 text-white relative z-10 stroke-[2.5] drop-shadow-lg" />
+                    <Icon className="w-8 h-8 sm:w-10 sm:h-10 md:w-10 md:h-10 text-white relative z-10 stroke-[2.5] drop-shadow-lg" />
                     
                     {/* Pulsing glow effect */}
                     <motion.div
@@ -208,14 +208,14 @@ export default function Stats() {
                 </motion.div>
                 
                 {/* Number */}
-                <div className="relative z-10 mb-3">
-                  <div className="text-gradient-green text-5xl md:text-6xl font-bold mb-2">
+                <div className="relative z-10 mb-2 sm:mb-3">
+                  <div className="text-gradient-green text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-1 sm:mb-2">
                     <AnimatedCounter value={stat.number} suffix={stat.suffix} />
                   </div>
                 </div>
                 
                 {/* Label */}
-                <h3 className="text-lg font-semibold text-white/90 group-hover:text-white transition-colors duration-300 relative z-10">
+                <h3 className="text-sm sm:text-base md:text-lg font-semibold text-white/90 group-hover:text-white transition-colors duration-300 relative z-10 break-words px-2">
                   {stat.label}
                 </h3>
                 
