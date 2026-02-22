@@ -13,12 +13,10 @@ import CustomCursor from '@/components/CustomCursor'
 import Stats from '@/components/Stats'
 import ParallaxSection from '@/components/ParallaxSection'
 import ScrollToTop from '@/components/ScrollToTop'
-import AnimatedGradient from '@/components/AnimatedGradient'
 import SkipToContent from '@/components/SkipToContent'
 
 export default function Home() {
   useEffect(() => {
-    // Initialize GSAP ScrollTrigger
     if (typeof window !== 'undefined') {
       const initGSAP = async () => {
         try {
@@ -30,7 +28,6 @@ export default function Home() {
           const gsap = gsapModule.default
           gsap.registerPlugin(ScrollTrigger)
 
-          // Add scroll-triggered animations
           const elements = gsap.utils.toArray<HTMLElement>('.fade-in-up')
           elements.forEach((element) => {
             gsap.fromTo(
@@ -49,7 +46,6 @@ export default function Home() {
             )
           })
         } catch (error) {
-          // Silently fail if GSAP fails to load
           if (process.env.NODE_ENV === 'development') {
             // eslint-disable-next-line no-console
             console.error('Failed to load GSAP ScrollTrigger:', error)
@@ -60,12 +56,10 @@ export default function Home() {
     }
   }, [])
 
-  // Check for reduced motion preference
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     ).matches
-
     if (prefersReducedMotion) {
       document.documentElement.style.setProperty('--animation-duration', '0.01s')
     }
@@ -76,24 +70,28 @@ export default function Home() {
       <SkipToContent />
       <LoadingScreen />
       <CustomCursor />
-      <main id="main-content" className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900/95 to-slate-950 relative" role="main">
-        <AnimatedGradient />
+      <main
+        id="main-content"
+        className="min-h-screen relative"
+        style={{ background: '#071020' }}
+        role="main"
+      >
         <Navigation />
         <Hero />
-        <ParallaxSection speed={0.2}>
+        <ParallaxSection speed={0.15}>
           <About />
         </ParallaxSection>
-        <ParallaxSection speed={0.3}>
+        <ParallaxSection speed={0.2}>
           <Research />
         </ParallaxSection>
-        <ParallaxSection speed={0.3}>
-          <Portfolio />
-        </ParallaxSection>
-        <ParallaxSection speed={0.2}>
+        <ParallaxSection speed={0.15}>
           <Services />
         </ParallaxSection>
-        <Stats />
         <ParallaxSection speed={0.2}>
+          <Portfolio />
+        </ParallaxSection>
+        <Stats />
+        <ParallaxSection speed={0.15}>
           <Contact />
         </ParallaxSection>
         <ScrollToTop />
@@ -101,4 +99,3 @@ export default function Home() {
     </>
   )
 }
-

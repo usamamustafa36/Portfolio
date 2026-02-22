@@ -4,22 +4,24 @@ import ErrorBoundaryWrapper from '@/components/ErrorBoundaryWrapper'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Usama Mustafa - PhD Researcher in Post-Quantum Cryptography',
+    default: 'Usama Mustafa - Embedded QA Engineer',
     template: '%s | Usama Mustafa',
   },
   description:
-    'PhD student at NUST researching Post-Quantum Cryptography to make encryption stronger. Specialized in quantum-resistant algorithms, information security, and cryptographic protocols.',
+    'Embedded QA Engineer with a B.Sc. in Electrical Engineering and M.Sc. in Information Security from NUST. Experienced in hardware-software integration testing, JIRA bug tracking, regression testing, and ISO 27001 compliance.',
   keywords: [
-    'Post-Quantum Cryptography',
-    'PhD Research',
-    'Quantum Computing',
-    'Cryptography',
+    'Embedded QA Engineer',
+    'Quality Assurance',
+    'Embedded Systems',
+    'Hardware Software Integration',
+    'JIRA',
+    'Regression Testing',
+    'ISO 27001',
+    'Electrical Engineering',
     'Information Security',
     'NUST',
-    'Encryption',
-    'Quantum-Resistant Algorithms',
-    'Cybersecurity Research',
-    'Academic Research',
+    'Test Automation',
+    'ELD Testing',
   ],
   authors: [{ name: 'Usama Mustafa' }],
   creator: 'Usama Mustafa',
@@ -38,9 +40,9 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: '/',
     siteName: 'Usama Mustafa',
-    title: 'Usama Mustafa - PhD Researcher in Post-Quantum Cryptography',
+    title: 'Usama Mustafa - Embedded QA Engineer',
     description:
-      'PhD student at NUST researching Post-Quantum Cryptography to make encryption stronger. Specialized in quantum-resistant algorithms and information security.',
+      'Embedded QA Engineer with B.Sc. EE and M.Sc. Information Security from NUST. Expert in hardware-software integration testing, JIRA, regression testing, and embedded systems QA.',
     images: [
       {
         url: '/og-image.jpg',
@@ -52,9 +54,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Usama Mustafa - PhD Researcher in Post-Quantum Cryptography',
+    title: 'Usama Mustafa - Embedded QA Engineer',
     description:
-      'PhD student at NUST researching Post-Quantum Cryptography to make encryption stronger.',
+      'Embedded QA Engineer with B.Sc. EE and M.Sc. Information Security. Expert in hardware-software integration testing and embedded systems QA.',
     images: ['/og-image.jpg'],
     creator: '@usamamustafa',
   },
