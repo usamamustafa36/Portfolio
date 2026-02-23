@@ -68,7 +68,7 @@ export default function Services() {
     <section
       id="skills"
       ref={ref}
-      className="py-20 sm:py-28 md:py-36 px-6 sm:px-8 lg:px-12 relative overflow-hidden"
+      className="py-16 sm:py-28 md:py-36 px-4 sm:px-8 lg:px-12 relative overflow-hidden"
       style={{ background: 'linear-gradient(180deg, #071020 0%, #0B1426 50%, #071020 100%)' }}
     >
       {/* Grid pattern overlay */}

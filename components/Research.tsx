@@ -55,7 +55,7 @@ export default function Research() {
     <section
       id="experience"
       ref={ref}
-      className="py-20 sm:py-28 md:py-36 px-6 sm:px-8 lg:px-12 relative overflow-hidden"
+      className="py-16 sm:py-28 md:py-36 px-4 sm:px-8 lg:px-12 relative overflow-hidden"
       style={{ background: 'linear-gradient(180deg, #0B1426 0%, #0F1E36 50%, #0B1426 100%)' }}
     >
       {/* Subtle background */}
@@ -109,7 +109,7 @@ export default function Research() {
                 />
 
                 {/* Card */}
-                <div className="glass-strong rounded-2xl sm:rounded-3xl p-6 sm:p-8 card-gold-border group transition-all duration-300 hover:shadow-lg"
+                <div className="glass-strong rounded-2xl sm:rounded-3xl p-4 sm:p-8 card-gold-border group transition-all duration-300 hover:shadow-lg"
                   style={{ '--hover-shadow': '0 8px 32px rgba(201,168,76,0.08)' } as React.CSSProperties}
                 >
                   {/* Header */}

@@ -35,7 +35,7 @@ export default function Portfolio() {
     <section
       id="certifications"
       ref={ref}
-      className="py-20 sm:py-28 md:py-36 px-6 sm:px-8 lg:px-12 relative overflow-hidden"
+      className="py-16 sm:py-28 md:py-36 px-4 sm:px-8 lg:px-12 relative overflow-hidden"
       style={{ background: 'linear-gradient(180deg, #0B1426 0%, #0F1E36 50%, #0B1426 100%)' }}
     >
       {/* Decorative element */}
@@ -79,18 +79,18 @@ export default function Portfolio() {
               animate={isInView ? { opacity: 1, y: 0, rotateX: 0 } : {}}
               transition={{ delay: 0.15 + index * 0.2, duration: 0.7, type: 'spring', stiffness: 100 }}
               whileHover={{ y: -6, transition: { duration: 0.25 } }}
-              className="glass-strong rounded-2xl sm:rounded-3xl p-6 sm:p-8 card-gold-border group transition-all duration-300 flex flex-col"
+              className="glass-strong rounded-2xl sm:rounded-3xl p-5 sm:p-8 card-gold-border group transition-all duration-300 flex flex-col"
             >
               {/* Header */}
               <div className="flex items-start justify-between gap-4 mb-5">
                 <div
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0"
+                  className="w-11 h-11 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0"
                   style={{
                     background: 'rgba(201,168,76,0.1)',
                     border: '1px solid rgba(201,168,76,0.2)',
                   }}
                 >
-                  <Award className="w-7 h-7 text-gold-400" />
+                  <Award className="w-5 h-5 sm:w-7 sm:h-7 text-gold-400" />
                 </div>
                 <div
                   className="text-[10px] font-bold tracking-widest px-3 py-1.5 rounded-full flex-shrink-0"

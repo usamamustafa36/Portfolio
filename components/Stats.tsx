@@ -61,7 +61,7 @@ function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
   }, [isInView, value])
 
   return (
-    <div ref={ref} className="text-4xl sm:text-5xl font-black">
+    <div ref={ref} className="text-3xl sm:text-4xl md:text-5xl font-black">
       {Math.floor(count)}{suffix}
     </div>
   )
@@ -74,14 +74,14 @@ export default function Stats() {
   return (
     <section
       ref={ref}
-      className="py-16 sm:py-20 px-6 sm:px-8 lg:px-12 relative overflow-hidden"
+      className="py-12 sm:py-20 px-4 sm:px-8 lg:px-12 relative overflow-hidden"
       style={{ background: '#020B18' }}
     >
       {/* Separator lines */}
       <div className="gold-divider mb-12 max-w-3xl mx-auto" style={{ opacity: 0.3 }} />
 
       <div className="max-w-5xl mx-auto">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 lg:gap-6">
           {stats.map((stat, index) => {
             const Icon = stat.icon
             return (
@@ -90,7 +90,7 @@ export default function Stats() {
                 initial={{ opacity: 0, y: 24, scale: 0.95 }}
                 animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
                 transition={{ delay: index * 0.1, duration: 0.7 }}
-                className="glass rounded-2xl p-5 sm:p-6 card-gold-border text-center group transition-all duration-300"
+                className="glass rounded-2xl p-4 sm:p-6 card-gold-border text-center group transition-all duration-300"
               >
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center mx-auto mb-4"

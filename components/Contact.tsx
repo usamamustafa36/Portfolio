@@ -80,7 +80,7 @@ export default function Contact() {
     <section
       id="contact"
       ref={ref}
-      className="py-20 sm:py-28 md:py-36 px-6 sm:px-8 lg:px-12 relative overflow-hidden"
+      className="py-16 sm:py-28 md:py-36 px-4 sm:px-8 lg:px-12 relative overflow-hidden"
       style={{ background: 'linear-gradient(180deg, #0B1426 0%, #0F1E36 40%, #0B1426 100%)' }}
     >
       {/* Decorative */}
@@ -115,7 +115,7 @@ export default function Contact() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-12">
           {/* Contact info */}
           <motion.div
             initial={{ opacity: 0, x: -24 }}
@@ -135,7 +135,7 @@ export default function Contact() {
               </div>
               <div className="min-w-0">
                 <p className="text-[10px] text-white/40 uppercase tracking-widest mb-0.5">Email</p>
-                <p className="text-white/80 text-sm font-medium truncate group-hover:text-gold-300 transition-colors">
+                <p className="text-white/80 text-sm font-medium break-all group-hover:text-gold-300 transition-colors">
                   usamamustafa1@gmail.com
                 </p>
               </div>
@@ -155,7 +155,7 @@ export default function Contact() {
               </div>
               <div className="min-w-0">
                 <p className="text-[10px] text-white/40 uppercase tracking-widest mb-0.5">GitHub</p>
-                <p className="text-white/80 text-sm font-medium truncate group-hover:text-gold-300 transition-colors">
+                <p className="text-white/80 text-sm font-medium break-all group-hover:text-gold-300 transition-colors">
                   github.com/usamamustafa36
                 </p>
               </div>

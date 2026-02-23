@@ -8,7 +8,6 @@ import Research from '@/components/Research'
 import Portfolio from '@/components/Portfolio'
 import Contact from '@/components/Contact'
 import Navigation from '@/components/Navigation'
-import LoadingScreen from '@/components/LoadingScreen'
 import CustomCursor from '@/components/CustomCursor'
 import Stats from '@/components/Stats'
 import ParallaxSection from '@/components/ParallaxSection'
@@ -68,7 +67,6 @@ export default function Home() {
   return (
     <>
       <SkipToContent />
-      <LoadingScreen />
       <CustomCursor />
       <main
         id="main-content"
